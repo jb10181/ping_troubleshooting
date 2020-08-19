@@ -5,9 +5,6 @@ import os
 import datetime
 import sys
 import socket
-# import ipaddress
-# import matplotlib.pyplot as plt
-# import matplotlib.dates as dt
 
 
 def date_formatting():  # formats the date
@@ -93,28 +90,11 @@ if os.path.isfile(file_name):  # delets file if user says so
         sys.exit()
 print("Creating new file called: " + file_name)
 
-# file_name = "ping_test.csv"
-# polling_rate = 1  # polling rate in s
-# timeout = 0.45  # wait before packet lost
-# hostname_internet = "1.1.1.1"
-# hostname_router = "192.168.0.1"
-# hostname_router = "8.8.8.8"
-# ping3.verbose_ping(hostname_internet, count=50, unit='ms')
-# ping3.verbose_ping(hostname_router, count=50, unit='ms')
-
 starttime = time.time()
 
 list_date_time = []
 list_result_internet = []
 list_result_router = []
-
-# plt.ion()
-# fig, ax1 = plt.subplots()
-# plt.tight_layout()
-# ax1.plot(0, 0, color="r")
-# ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-# ax2.plot(0, 0, color="b")
-# ax2.set_yticks([], [])
 
 while True:  # loops forever
     date_time = date_formatting()
@@ -141,32 +121,6 @@ while True:  # loops forever
     except TypeError:
         print("ping to " + hostname_router + " " *
               (20 - len(hostname_router)) + "lost")
-
-    # formatter = dt.DateFormatter("%Y-%m-%d-%X")
-    # ax1.xaxis.set_major_formatter(formatter)
-    # dates = list_date_time
-    #
-    # ax1.plot_date(dates,
-    #               list_result_internet,
-    #               linestyle="-",
-    #               color="b",
-    #               xdate=True,
-    #               ydate=False)
-    # ax1.plot_date(dates,
-    #               list_result_router,
-    #               linestyle="-",
-    #               color="r",
-    #               xdate=True,
-    #               ydate=False)
-    #
-    # ax1.set_ylabel('ping time (ms)', color="k")
-    # ax2.set_yticks([], [])
-    # ax1.legend([hostname_internet, hostname_router], loc='upper right')
-    # ax1.set_xlim([dates[0], dates[-1]])
-    #
-    # fig.canvas.draw()
-    # plt.pause(0.01)
-    # ax1.cla()
 
     time.sleep(
         polling_rate -
