@@ -78,7 +78,10 @@
 
 [![Ping Troubleshooting Tools Screen Shot][product-screenshot]](https://github.com/jb10181/ping_troubleshooting/blob/master/images/viewer.png)
 
-[LinkedIn](https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png)
+[![Ping Troubleshooting Tools Screen Shot 2][https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png]](https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png)
+
+<!-- [LinkedIn](https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png)
+https://github.com/jb10181/ping_troubleshooting/blob/master/images/viewer.png -->
 
 <!-- [![Ping Troubleshooting Tools Screen Shot 2][product-screenshot]](https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png) -->
 
