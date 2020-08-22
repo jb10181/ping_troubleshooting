@@ -78,54 +78,54 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
+<!-- Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+`github_username`, `repo`, `twitter_handle`, `email` -->
 
 
-### Built With
+<!-- ### Built With
 
 * []()
 * []()
-* []()
+* []() -->
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+<!-- ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these simple steps. -->
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* csv
+The Python packages required to run
+<!-- * Python packages -->
 ```sh
-pip install csv
+csv
 ```
 ```sh
-pip install matplotlib
+matplotlib
 ```
 ```sh
-pip install ping3
+ping3
 ```
 ```sh
-pip install time
+time
 ```
 ```sh
-pip install os
+os
 ```
 ```sh
-pip install datetime
+datetime
 ```
 ```sh
-pip install sys
+sys
 ```
 ```sh
-pip install socket
+socket
 ```
 ```sh
-pip install tkinter
+tkinter
 ```
 
 
@@ -135,9 +135,9 @@ pip install tkinter
 ```sh
 git clone https://github.com/jb10181/ping_troubleshooting.git
 ```
-2. Install NPM packages
+2. Install the required Python packages
 ```sh
-npm install
+pip install csv matplotlib ping3 time os datetime sys socket tkinter
 ```
 
 
