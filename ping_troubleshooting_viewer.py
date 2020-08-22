@@ -1,23 +1,30 @@
 from csv import reader
 from tkinter import filedialog
 import matplotlib.pyplot as plt
-# import matplotlib.dates as dt
+import sys
 import tkinter
-from tkinter.ttk import *
 import matplotlib
 from matplotlib.figure import Figure
-matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import NavigationToolbar2Tk
 
-import_file_path = filedialog.askopenfilename()
+matplotlib.use("TkAgg")
+
+
+def close_window(root):  # exits program
+    print("Program exiting")
+    root.destroy()
+    sys.exit()
+
+
+import_file_path = filedialog.askopenfilename()  # loads csv
 print("Loading csv file: " + import_file_path)
 
-list_date_time = []
+list_date_time = []  # imports csv data
 list_result_internet = []
 list_result_router = []
 with open(import_file_path) as csvDataFile:
     csvReader = reader(csvDataFile)
-    # print(csvReader)
     count = 0
     for row in csvReader:
         if count == 0:
@@ -27,63 +34,59 @@ with open(import_file_path) as csvDataFile:
             list_date_time.append(row[0])
             list_result_internet.append(float(row[1]))
             list_result_router.append(float(row[2]))
-        # print(row)
         count += 1
 
-root = tkinter.Tk()
+root = tkinter.Tk()  # gui root
+root.title("Ping analysis tool")
 
 figure = Figure(figsize=(10, 6), dpi=100)
 plot = figure.add_subplot(1, 1, 1)
 
-dates = list_date_time
-
-# formatter = dt.DateFormatter("%Y-%m-%d-%X")
-# plot.xaxis.set_major_formatter(formatter)
-# dates = list_date_time
-
-plot.plot_date(dates,
+plot.plot_date(list_date_time,
                list_result_internet,
                linestyle="-",
                color="b",
                xdate=True,
-               ydate=False)
-plot.plot_date(dates,
+               ydate=False)  # plots first hostname
+plot.plot_date(list_date_time,
                list_result_router,
                linestyle="-",
                color="r",
                xdate=True,
-               ydate=False)
+               ydate=False)  # plots second hostname
 
-no_ticks = 4
+no_ticks = 4  # sets number of x axis labels
 plot.xaxis.set_major_locator(plt.MaxNLocator(no_ticks))
 
-plot.set_ylabel('ping time (ms)', color="k")
+plot.set_ylabel('ping time (ms)', color="k")  # sets graph parameters
 plot.legend([hostname_internet, hostname_router], loc='upper right')
-plot.set_xlim([dates[0], dates[-1]])
+plot.set_xlim([list_date_time[0], list_date_time[-1]])
 
-canvas = FigureCanvasTkAgg(figure, root)
-canvas.get_tk_widget().grid(row=0, column=0, sticky='nw')
+canvas = FigureCanvasTkAgg(figure, root)  # plot graph
+canvas.get_tk_widget().grid(row=1, column=0, sticky='nesw')
 
-scrollbar = tkinter.Scrollbar(root,
-                              orient="horizontal")
-scrollbar['command'] = canvas.get_tk_widget().xview
-scrollbar.grid(row=1, column=0, sticky='nsew')
-# canvas.configure(xscrollcommand=scrollbar.set)
+toolbarFrame = tkinter.Frame(master=root)  # navigation toolbar
+toolbarFrame.grid(row=2, column=0)
+toolbar = NavigationToolbar2Tk(canvas, toolbarFrame)
 
-# canvas.config(scrollregion=canvas.bbox("all"))
+label1 = tkinter.Label(root, text="Command", font="bold")  # command title
+label1.grid(row=0, column=1)
 
-# scrollbar["command"] = canvas.get_tk_widget().xview
-# canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
+label2 = tkinter.Label(root, text="Keyboard Shortcut(s)", font="bold")  # shortcut title
+label2.grid(row=0, column=2)
 
-# scrollbar = tkinter.Scrollbar(master=root)
-# scrollbar.pack(side=tkinter.BOTTOM)
-# scrollbar["command"] = canvas.get_tk_widget().xview
-# canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
-# scrollbar = tkinter.Scrollbar(root, orient="horizontal")
-# scrollbar.grid(row=1, column=0, sticky='s')
-# # scrollbar["command"] = canvas.get_tk_widget().xview
-# # canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
-#
-# scrollbar["command"] = canvas.get_tk_widget().xview
-# canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
+# command list
+comm_str3 = "Home/Reset \n Pan/Zoom \n Zoom-to-rect \n Save \n Constrain pan/zoom to x axis \n Constrain pan/zoom to y axis"
+label3 = tkinter.Label(root, text=comm_str3)
+label3.grid(row=1, column=1, sticky="n")
+# shortcut list
+comm_str4 = "h or r or home \n p \n o \n ctrl + s \n hold x when panning/zooming with mouse \n hold y when panning/zooming with mouse"
+labe4 = tkinter.Label(root, text=comm_str4)
+labe4.grid(row=1, column=2, sticky="n")
+
+button = tkinter.Button(root,
+                        text="Exit program",
+                        command=lambda: close_window(root))  # exit button
+button.grid(row=0, column=0, sticky="ne")
+
 root.mainloop()
