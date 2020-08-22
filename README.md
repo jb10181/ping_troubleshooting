@@ -60,23 +60,25 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
+  <!-- * [Built With](#built-with) -->
+<!-- * [Getting Started](#getting-started) -->
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
+<!-- * [Usage](#usage) -->
+<!-- * [Roadmap](#roadmap) -->
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+<!-- * [Acknowledgements](#acknowledgements) -->
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Ping Troubleshooting Tools Screen Shot][product-screenshot]](https://github.com/jb10181/ping_troubleshooting/blob/master/images/viewer.png)
+
+I wrote some tools to generate a .csv containing ping information from two user selected IP addresses and analyse the ping vs time.
 
 <!-- Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
@@ -212,4 +214,4 @@ Project Link: [https://github.com/jb10181/ping_troubleshooting](https://github.c
 [license-url]: https://github.com/jb10181/ping_troubleshooting/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/burchj/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://github.com/jb10181/ping_troubleshooting/blob/master/images/viewer.png
