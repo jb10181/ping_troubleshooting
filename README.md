@@ -34,9 +34,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jb10181/ping_troubleshooting">
+  <!-- <a href="https://github.com/jb10181/ping_troubleshooting">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">Ping Troubleshooting Tools</h3>
 
@@ -62,8 +62,8 @@
 * [About the Project](#about-the-project)
   <!-- * [Built With](#built-with) -->
 <!-- * [Getting Started](#getting-started) -->
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
 <!-- * [Usage](#usage) -->
 <!-- * [Roadmap](#roadmap) -->
 * [Contributing](#contributing)
