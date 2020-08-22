@@ -34,7 +34,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jb10181/repo">
+  <a href="https://github.com/jb10181/ping_troubleshooting">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -43,14 +43,14 @@
   <p align="center">
     Tools to diagnose ping issues. In particular, to diagnose ping of your router relative to an external server (e.g. 8.8.8.8)
     <br />
-    <a href="https://github.com/jb10181/repo"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jb10181/ping_troubleshooting"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jb10181/repo">View Demo</a>
+    <a href="https://github.com/jb10181/ping_troubleshooting">View Demo</a>
     ·
-    <a href="https://github.com/jb10181/repo/issues">Report Bug</a>
+    <a href="https://github.com/jb10181/ping_troubleshooting/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jb10181/repo/issues">Request Feature</a>
+    <a href="https://github.com/jb10181/ping_troubleshooting/issues">Request Feature</a>
   </p>
 </p>
 
@@ -105,10 +105,10 @@ npm install npm@latest -g
 ```
 
 ### Installation
- 
+
 1. Clone the repo
 ```sh
-git clone https://github.com/jb10181/repo.git
+git clone https://github.com/jb10181/ping_troubleshooting.git
 ```
 2. Install NPM packages
 ```sh
@@ -129,7 +129,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/jb10181/repo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/jb10181/ping_troubleshooting/issues) for a list of proposed features (and known issues).
 
 
 
