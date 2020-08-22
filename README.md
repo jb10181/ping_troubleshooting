@@ -99,10 +99,35 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* csv
 ```sh
-npm install npm@latest -g
+pip install csv
 ```
+```sh
+pip install matplotlib
+```
+```sh
+pip install ping3
+```
+```sh
+pip install time
+```
+```sh
+pip install os
+```
+```sh
+pip install datetime
+```
+```sh
+pip install sys
+```
+```sh
+pip install socket
+```
+```sh
+pip install tkinter
+```
+
 
 ### Installation
 
@@ -175,15 +200,15 @@ Project Link: [https://github.com/jb10181/ping_troubleshooting](https://github.c
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/jb10181/ping_troubleshooting.svg?style=flat-square
+[contributors-url]: https://github.com/jb10181/ping_troubleshooting/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jb10181/ping_troubleshooting.svg?style=flat-square
+[forks-url]: https://github.com/jb10181/ping_troubleshooting/network/members
+[stars-shield]: https://img.shields.io/github/stars/jb10181/ping_troubleshooting.svg?style=flat-square
+[stars-url]: https://github.com/jb10181/ping_troubleshooting/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jb10181/ping_troubleshooting.svg?style=flat-square
+[issues-url]: https://github.com/jb10181/ping_troubleshooting/issues
+[license-shield]: https://img.shields.io/github/license/jb10181/ping_troubleshooting.svg?style=flat-square
 [license-url]: https://github.com/jb10181/ping_troubleshooting/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/burchj/
