@@ -17,6 +17,7 @@ def close_window(root):  # exits program
     sys.exit()
 
 
+tkinter.Tk().withdraw()
 import_file_path = filedialog.askopenfilename()  # loads csv
 print("Loading csv file: " + import_file_path)
 
