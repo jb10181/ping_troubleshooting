@@ -43,14 +43,14 @@
   <p align="center">
     Tools to diagnose ping issues. In particular, to diagnose ping of your router relative to an external server (e.g. 8.8.8.8)
     <br />
-    <a href="https://github.com/jb10181/ping_troubleshooting"><strong>Explore the docs »</strong></a>
+    <!-- <a href="https://github.com/jb10181/ping_troubleshooting"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/jb10181/ping_troubleshooting">View Demo</a>
     ·
     <a href="https://github.com/jb10181/ping_troubleshooting/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jb10181/ping_troubleshooting/issues">Request Feature</a>
+    <a href="https://github.com/jb10181/ping_troubleshooting/issues">Request Feature</a> -->
   </p>
 </p>
 
@@ -118,18 +118,18 @@ npm install
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+<!-- ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
-See the [open issues](https://github.com/jb10181/ping_troubleshooting/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/jb10181/ping_troubleshooting/issues) for a list of proposed features (and known issues). -->
 
 
 
@@ -156,18 +156,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+James Burch - [LinkedIn](https://www.linkedin.com/in/burchj/)
 
 Project Link: [https://github.com/jb10181/ping_troubleshooting](https://github.com/jb10181/ping_troubleshooting)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+<!-- ## Acknowledgements
 
 * []()
 * []()
-* []()
+* []() -->
 
 
 
