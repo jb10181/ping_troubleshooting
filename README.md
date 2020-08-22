@@ -81,7 +81,7 @@ https://github.com/jb10181/ping_troubleshooting/blob/master/images/viewer.png --
 
 <!-- [![Ping Troubleshooting Tools Screen Shot 2][product-screenshot]](https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png) -->
 
-I wrote some tools to generate a .csv containing ping information from two user selected IP addresses and analyse the ping vs time.
+I wrote some tools to ping two user-selected hosts (ideally their router plus an external host) and generate a .csv containing the ping information. There is also a tool to view the ping information vs time and identify dropped packets.
 
 <!-- Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
