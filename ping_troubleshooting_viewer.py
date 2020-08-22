@@ -1,13 +1,13 @@
-import time
 from csv import reader
-import os
-import datetime
-import sys
 from tkinter import filedialog
-# import ipaddress
 import matplotlib.pyplot as plt
-import matplotlib.dates as dt
-
+# import matplotlib.dates as dt
+import tkinter
+from tkinter.ttk import *
+import matplotlib
+from matplotlib.figure import Figure
+matplotlib.use("TkAgg")
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 import_file_path = filedialog.askopenfilename()
 print("Loading csv file: " + import_file_path)
@@ -15,51 +15,75 @@ print("Loading csv file: " + import_file_path)
 list_date_time = []
 list_result_internet = []
 list_result_router = []
-
-plt.ion()
-fig, ax1 = plt.subplots()
-plt.tight_layout()
-ax1.plot(0, 0, color="r")
-ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-ax2.plot(0, 0, color="b")
-ax2.set_yticks([], [])
-
-
 with open(import_file_path) as csvDataFile:
     csvReader = reader(csvDataFile)
     # print(csvReader)
+    count = 0
     for row in csvReader:
-        list_date_time.append(row[0])
-        list_result_internet.append(row[1])
-        list_result_router.append(row[2])
+        if count == 0:
+            hostname_internet = row[1]
+            hostname_router = row[2]
+        else:
+            list_date_time.append(row[0])
+            list_result_internet.append(float(row[1]))
+            list_result_router.append(float(row[2]))
         # print(row)
+        count += 1
 
-print(list_date_time)
+root = tkinter.Tk()
 
-while True:  # loops forever
+figure = Figure(figsize=(10, 6), dpi=100)
+plot = figure.add_subplot(1, 1, 1)
 
-    formatter = dt.DateFormatter("%Y-%m-%d-%X")
-    ax1.xaxis.set_major_formatter(formatter)
-    dates = list_date_time
+dates = list_date_time
 
-    ax1.plot_date(dates,
-                  list_result_internet,
-                  linestyle="-",
-                  color="b",
-                  xdate=True,
-                  ydate=False)
-    ax1.plot_date(dates,
-                  list_result_router,
-                  linestyle="-",
-                  color="r",
-                  xdate=True,
-                  ydate=False)
+# formatter = dt.DateFormatter("%Y-%m-%d-%X")
+# plot.xaxis.set_major_formatter(formatter)
+# dates = list_date_time
 
-    ax1.set_ylabel('ping time (ms)', color="k")
-    ax2.set_yticks([], [])
-    ax1.legend([hostname_internet, hostname_router], loc='upper right')
-    ax1.set_xlim([dates[0], dates[-1]])
+plot.plot_date(dates,
+               list_result_internet,
+               linestyle="-",
+               color="b",
+               xdate=True,
+               ydate=False)
+plot.plot_date(dates,
+               list_result_router,
+               linestyle="-",
+               color="r",
+               xdate=True,
+               ydate=False)
 
-    fig.canvas.draw()
-    plt.pause(0.01)
-    ax1.cla()
+no_ticks = 4
+plot.xaxis.set_major_locator(plt.MaxNLocator(no_ticks))
+
+plot.set_ylabel('ping time (ms)', color="k")
+plot.legend([hostname_internet, hostname_router], loc='upper right')
+plot.set_xlim([dates[0], dates[-1]])
+
+canvas = FigureCanvasTkAgg(figure, root)
+canvas.get_tk_widget().grid(row=0, column=0, sticky='nw')
+
+scrollbar = tkinter.Scrollbar(root,
+                              orient="horizontal")
+scrollbar['command'] = canvas.get_tk_widget().xview
+scrollbar.grid(row=1, column=0, sticky='nsew')
+# canvas.configure(xscrollcommand=scrollbar.set)
+
+# canvas.config(scrollregion=canvas.bbox("all"))
+
+# scrollbar["command"] = canvas.get_tk_widget().xview
+# canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
+
+# scrollbar = tkinter.Scrollbar(master=root)
+# scrollbar.pack(side=tkinter.BOTTOM)
+# scrollbar["command"] = canvas.get_tk_widget().xview
+# canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
+# scrollbar = tkinter.Scrollbar(root, orient="horizontal")
+# scrollbar.grid(row=1, column=0, sticky='s')
+# # scrollbar["command"] = canvas.get_tk_widget().xview
+# # canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
+#
+# scrollbar["command"] = canvas.get_tk_widget().xview
+# canvas.get_tk_widget()["xscrollcommand"] = scrollbar.set
+root.mainloop()

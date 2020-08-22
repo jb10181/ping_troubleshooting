@@ -10,8 +10,6 @@ import socket
 def date_formatting():  # formats the date
     date_time = datetime.datetime.now()
 
-    list_date_time.append(date_time)
-
     return date_time.strftime("%Y") + " " + date_time.strftime(
         "%B") + " " + date_time.strftime("%d") + " " + date_time.strftime("%X")
 
@@ -27,9 +25,6 @@ def ping_request():  # pings the two hostnames
                                timeout=timeout,
                                ttl=64,
                                size=32)
-
-    list_result_internet.append(result_internet)
-    list_result_router.append(result_router)
 
     return result_internet, result_router
 
@@ -92,9 +87,13 @@ print("Creating new file called: " + file_name)
 
 starttime = time.time()
 
-list_date_time = []
-list_result_internet = []
-list_result_router = []
+with open(file_name, 'a+',
+          newline='') as write_obj:  # appends data to file
+    # Create a writer object from csv module
+    csv_writer = writer(write_obj)
+    # Add contents of list as last row in the csv file
+    csv_writer.writerow(["datetime", hostname_internet, hostname_router])
+
 
 while True:  # loops forever
     date_time = date_formatting()
