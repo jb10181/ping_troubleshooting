@@ -222,4 +222,4 @@ Project Link: [https://github.com/jb10181/ping_troubleshooting](https://github.c
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/burchj/
 [product-screenshot]: https://github.com/jb10181/ping_troubleshooting/blob/master/images/viewer.png
-[product-screenshot]: https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png
+[product-screenshot2]: https://github.com/jb10181/ping_troubleshooting/blob/master/images/generator.png
