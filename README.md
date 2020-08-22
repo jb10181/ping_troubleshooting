@@ -195,7 +195,7 @@ Project Link: [https://github.com/jb10181/ping_troubleshooting](https://github.c
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [README template from](https://github.com/othneildrew/Best-README-Template)
+* [README template](https://github.com/othneildrew/Best-README-Template)
 <!-- * []()
 * []() -->
 
