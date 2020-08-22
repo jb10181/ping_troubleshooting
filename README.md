@@ -60,16 +60,12 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  <!-- * [Built With](#built-with) -->
-<!-- * [Getting Started](#getting-started) -->
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
-<!-- * [Usage](#usage) -->
-<!-- * [Roadmap](#roadmap) -->
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-<!-- * [Acknowledgements](#acknowledgements) -->
+* [Acknowledgements](#acknowledgements)
 
 
 
@@ -197,10 +193,10 @@ Project Link: [https://github.com/jb10181/ping_troubleshooting](https://github.c
 
 
 <!-- ACKNOWLEDGEMENTS -->
-<!-- ## Acknowledgements
+## Acknowledgements
 
-* []()
-* []()
+* [README template from](https://github.com/othneildrew/Best-README-Template)
+<!-- * []()
 * []() -->
 
 
