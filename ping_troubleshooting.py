@@ -53,6 +53,17 @@ def legal_float(number):  # checks if it's a real float
 
 file_name = str(input("Enter filename:"))  # input file name
 
+if file_name[-4:] != ".csv":  # appends .csv suffix if absent
+    file_name = file_name + ".csv"
+
+if os.path.isfile(file_name):  # deletes file if user says so
+    del_bool = input("Delete previous file (y/n)")
+    if del_bool == "y" or del_bool == "Y":
+        os.remove(file_name)
+    else:
+        print("Exiting program")
+        sys.exit()
+
 exit_str = "0"
 while exit_str == "0":  # input polling rate with validity check
     polling_rate = input("Polling rate (default is 1.00s):")
@@ -73,17 +84,9 @@ while exit_str == "0":  # input second hostname with validity check
     hostname_router = str(input("Enter router hostname (e.g. 192.168.0.1):"))
     exit_str = legal_ip(hostname_internet)
 
-if file_name[-4:] != ".csv":
-    file_name = file_name + ".csv"
 
-if os.path.isfile(file_name):  # delets file if user says so
-    del_bool = input("Delete previous file (y/n)")
-    if del_bool == "y" or del_bool == "Y":
-        os.remove(file_name)
-    else:
-        print("Exiting program")
-        sys.exit()
-print("Creating new file called: " + file_name)
+print("Creating new file in: " + os.getcwd())
+print("Called: " + file_name)
 
 starttime = time.time()
 
