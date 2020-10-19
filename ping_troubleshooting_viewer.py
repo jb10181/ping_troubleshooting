@@ -75,12 +75,14 @@ def load_and_display():  # loads data and creates plots
                    list_result_internet,
                    linestyle="-",
                    color="b",
+                   markersize=2,
                    xdate=True,
                    ydate=False)  # plots first hostname
     plot.plot_date(list_date_time,
                    list_result_router,
                    linestyle="-",
                    color="r",
+                   markersize=2,
                    xdate=True,
                    ydate=False)  # plots second hostname
 
@@ -88,12 +90,14 @@ def load_and_display():  # loads data and creates plots
                    list_drops_internet,
                    linestyle="-",
                    color="k",
+                   markersize=2,
                    xdate=True,
                    ydate=False)  # plots first hostname drops
     plot.plot_date(list_date_time,
                    list_drops_router,
                    linestyle="-",
                    color="y",
+                   markersize=2,
                    xdate=True,
                    ydate=False)  # plots second hostname drops
 
@@ -158,6 +162,7 @@ def tkinter_gui(figure, root):  # creates tkinter gui
 
 def main_loop():
     root = tkinter.Tk()  # gui root
+    root.title("Ping Troubleshooting Viewer")
 
     figure = load_and_display()
     tkinter_gui(figure, root)
